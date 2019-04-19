@@ -1,0 +1,138 @@
+ <!DOCTYPE html>
+<html lang="en" dir="ltr" id="etusivu">
+  <head>
+    <title>Otto-ohjelmoija Oy - Autamme Sinua Koodaaman!</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/kokoava.css">
+  </head>
+  <body data-spy="scroll" data-target=".navbar" data-offset="120">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand glyphicon glyphicon-globe" style="font-size: 40px;" href="#etusivu">TTO</a>
+        </div>
+        <div class="collapse navbar-collapse" id="nav1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a data-toggle="collapse" data-target="#nav1" href="#about">YHTEYSTIEDOT</a></li>
+            <li><a data-toggle="collapse" data-target="#nav1" href="#kokeile">KOKEILE OHJELMOINTIA</a></li>
+            <li><a data-toggle="collapse" data-target="#nav1" href="#portfolio">PORTFOLIO</a></li>
+          </ul>
+        </div>
+        <div class="collapse navbar-collapse" id="nav2">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#about">YHTEYSTIEDOT</a></li>
+            <li><a href="#kokeile">KOKEILE OHJELMOINTIA</a></li>
+            <li><a href="#portfolio">PORTFOLIO</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="text-center bgimgSize">
+      <div class="otPos">
+        <h1 class="titleBold glyphicon glyphicon-globe">TTO-OHJELMOIJA</h1>
+        <p class="subTitleBold">Autamme sinua koodaamaan!</p>
+      </div>
+    </div>
+
+    <div class="container-fluid text-center" id="about">
+
+        <h2 class="text-center">YHTEYSTIEDOT</h2>
+        <br>
+        <div class="row">
+          <div class="col-sm-4">
+            <p>Vastaamme 24-tunnin sisällä.</p>
+            <p><span class="glyphicon glyphicon-map-marker"></span> Neulastie 8, 00410 Helsink</p>
+            <p><span class="glyphicon glyphicon-phone"></span> +358 50 333123</p>
+            <p><span class="glyphicon glyphicon-envelope"></span> otto@ohjelmoija.fi</p>
+          </div>
+          <div class="col-sm-8">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="nimi" name="name" placeholder="Nimi" type="text" required>
+              </div>
+              <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+              </div>
+            </div>
+            <textarea class="form-control" id="kommentti" name="comments" placeholder="Kommentti" rows="5"></textarea><br>
+            <div class="row">
+              <div class="col-sm-12 form-group">
+                <button class="btn btn-default pull-left" type="submit">Lähetä</button>
+                <button class="btn btn-default pull-left" type="reset">Tyhjennä</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div>
+      <img src="img/business.jpg" width="100%" alt="">
+    </div>
+
+
+
+    <div class="container-fluid text-center bg-grey" id="kokeile">
+      <h2>KOKEILE OHJELMOINTIA</h2><br>
+      <h4>Katso mitä tapahtuu, kun kirjoitat komennon <strong>robotto.wave();</strong></h4><br>
+      <div class="row">
+        <div class="col-sm-8">
+          <img id="robottoKuva" src="img/perus.png" width="100%" alt="">
+        </div>
+        <div class="col-sm-4">
+          <p id="virheViesti"></p>
+          <input class="form-control" id="komentoRivi" placeholder="Anna komento: robotto.wave();" rows="5"></input><br>
+          <div class="row">
+            <div class="col-sm-12 form-group">
+              <button class="btn btn-default pull-left" type="submit" onclick="robotto()">Suorita</button>
+              <button class="btn btn-default pull-left" type="reset" onclick="stopRobotto()">Keskeytä</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="container-fluid text-center" id="portfolio">
+        <h2>PORTFOLIO</h2><br>
+        <h4>Esimerkki ohjelmat</h4>
+        <div class="row text-center">
+          <div class="col-sm-6">
+            <div class="thumbnail">
+              <a href="js-ventti.html"><img src="img/korttipakka.jpg" alt="" width="400" height="300"></a>
+              <p><strong>Ventti-peli</strong></p>
+              <p>Pelaa Ventti peliä!</p>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="thumbnail">
+              <a href="js-perus.html"><img src="img/lasku.jpg" alt="" width="400" height="300"></a>
+              <p><strong>Lasku esimerkki</strong></p>
+              <p>Syötä kaksi arvoa ja laske niitten tulos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <footer class="container-fluid text-center bg-grey">
+      <a href="#etusivu"><i style="font-size: 60px; color:#3454b4" class="glyphicon glyphicon-arrow-up"></i></a><br><br>
+      <p>Powered by Bootstrap 3</p>
+    </footer>
+
+    <script src="js/js-smooth-scrolling.js" charset="utf-8"></script>
+    <script src="js/robotto.js" charset="utf-8"></script>
+  </body>
+</html>
